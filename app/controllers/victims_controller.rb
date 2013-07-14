@@ -42,7 +42,7 @@ class VictimsController < ApplicationController
   # POST /victims
   # POST /victims.json
   def create
-    @victim = Victim.new(params[:victim])
+    @victim = Victim.find_or_initilize_by_facebook_url(params[:victim])
 
     respond_to do |format|
       if @victim.save

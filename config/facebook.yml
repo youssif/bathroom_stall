@@ -1,0 +1,9 @@
+development:
+ app_id: ENV['FB_APP_ID']
+ secret_key: ENV['FB_SECRET_ID']
+test:
+ app_id: ENV['FB_APP_ID']
+ secret_key: ENV['FB_SECRET_ID']
+production:
+ app_id: ENV['FB_APP_ID']
+ secret_key: ENV['FB_SECRET_ID']

@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20130714195334) do
+=======
+ActiveRecord::Schema.define(:version => 20130714180653) do
+>>>>>>> 52b9b13f2fb6efb9081d8e55014e19042aa0f0f1
 
   create_table "comments", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -39,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20130714195334) do
     t.string   "city"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "facebook_id"
   end
 
 end
