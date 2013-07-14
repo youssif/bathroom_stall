@@ -1,16 +1,27 @@
-%h3 Home
-- @users.each do |user|
-  .get_started
-    .start_title
-      %h3 Get rating!
-      
-      .find_victims
-        / search using https://rubygems.org/gems/sunspot
-        = link_to 'Browse Peeps to Review', victims_path
-      .create_victims
-        = link_to 'Review a New Peep', new_victim_path
+.home_title
+  %h3 Welcome to Bathroom Stall
+  
+  %h5 People + Reviews
+
+.tongue_in_cheek
+  %p "Live in such a way that if someone spoke badly about you no one would believe it." -Unknown
+
+
+
+
+.crack_title
+  %h3 Enough stalling, let's get cracking.
+  
+  .find_victims
+    / search using https://rubygems.org/gems/sunspot
+    = link_to 'Browse Peeps to Review', victims_path
+  .create_victims
+    = link_to 'Review a New Peep', new_victim_path
 
 
   / Need to path to victims
   / Need to path to victim creation
 
+.about
+  %h3 What is Bathroom Stall?
+  %p Bathroom Stall is an online platform for posting reviews about people you know. 

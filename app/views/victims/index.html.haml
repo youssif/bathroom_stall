@@ -1,24 +1,25 @@
-%h1 Listing victims
+%h1 The Good, the bad, the reviewed
+%h3 Click on a Name to See a Person's Reviews!
 
 %table
   %tr
     %th Name
-    %th Facebook url
-    %th Gender
+    / %th Facebook url
+    / %th Gender
     %th City
-    %th
-    %th
+    %th Total Reviews
+    %th 
     %th
 
   - @victims.each do |victim|
     %tr
-      %td= victim.name
-      %td= victim.facebook_url
-      %td= victim.gender
+      %td= link_to victim.name, victim
+      / %td= victim.facebook_url
+      / %td= victim.gender
       %td= victim.city
-      %td= link_to 'Show', victim
-      %td= link_to 'Edit', edit_victim_path(victim)
-      %td= link_to 'Destroy', victim, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= 'reviews.count' 
+      / %td= link_to 'Edit', edit_victim_path(victim)
+      / %td= link_to 'Destroy', victim, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
