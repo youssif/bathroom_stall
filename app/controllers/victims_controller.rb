@@ -17,7 +17,6 @@ class VictimsController < ApplicationController
     @comment = @victim.comments.build
     @current_user = @comment.user_id
     @comments = Comment.all
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @victim }
