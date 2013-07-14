@@ -14,7 +14,6 @@
   = @victim.city
 
 
-
 = link_to 'Edit', edit_victim_path(@victim)
 \|
 = link_to 'Back', victims_path
@@ -35,6 +34,7 @@
       %li= msg
 
   .field
+  
     = f.text_area :message, :placeholder => "What do you think?"
 
   .actions= f.submit
