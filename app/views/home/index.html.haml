@@ -14,10 +14,10 @@
   
   .find_victims
     / search using https://rubygems.org/gems/sunspot
-    = button_to 'Browse Reviewed People', victims_path
+    = link_to 'Browse Reviewed People', victims_path
     /= link_to 'Browse Peeps to Review', victims_path
   .create_victims
-    = button_to 'Write About Someone', new_victim_path
+    = link_to 'Write About Someone', new_victim_path
     /= link_to 'Review a New Peep', new_victim_path
 
 
