@@ -37,9 +37,6 @@
       = @victim.errors.full_messages.each do |msg|
         %li= msg
 
-
-
-  .field
     %div.good_or_bad
       %h5 Your overall impression of this person 
       %input{:name => "good_bad", :type => "radio", :value => "Thumbs up!"}
@@ -57,6 +54,10 @@
       Keep me anonymous.
     %div.whatthink
       = f.text_area :message, :placeholder => "What do you think?"
+
+
+  .field
+    
 
   .actions= f.submit
 
