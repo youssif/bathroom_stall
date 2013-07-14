@@ -55,4 +55,51 @@
 	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
 	    font-weight: normal;
 	    font-style: normal; }
+
 */
+.navigation{
+	padding: 1em;
+	width: 99%;
+	margin-top: 0.6em;
+	margin-left: 0em;
+	border-radius: 0.3em;
+	box-shadow: 1px 1px 1px rgb(228, 227, 221);
+	background: #1e9a91; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #1e9a91 0%, #2ad8be 99%, #20cab3 99%, #7ee8d6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e9a91), color-stop(99%,#2ad8be), color-stop(99%,#20cab3), color-stop(100%,#7ee8d6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e9a91', endColorstr='#7ee8d6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	font-family: 'Henny Penny', cursive;
+	text-decoration: none;
+	padding: 1em;
+};
+
+
+
+.navigation:visited{
+	text-decoration: none;
+}
+
+div.credentials{
+	float: right;
+}
+
+a.brand{
+	text-decoration: none;
+	font-size: 3em;
+	padding-top: 0.5em;
+	color: rgb(230, 234, 235);
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+a.brand:visited{
+	text-decoration: none;
+	color: rgb(230, 234, 235);
+}
+

@@ -1,12 +1,14 @@
-= link_to "Bathroom Stall", root_path, :class => 'brand'
-%ul.nav
-  - if user_signed_in?
-    %li
-      Currently logged in as
-      = link_to current_user.name, users_path
+%div.navigation
+  = link_to "Bathroom Stall", root_path, :class => 'brand'
+  %div.credentials
+    %ul.nav
+      - if user_signed_in?
+        %li
+          Currently logged in as
+          = link_to current_user.name, users_path
       
-    %li
-      = link_to 'Logout', signout_path
-  - else
-    %li
-      = link_to 'Login', signin_path
+        %li
+          = link_to 'Logout', signout_path
+      - else
+        %li
+          = link_to 'Login', signin_path
