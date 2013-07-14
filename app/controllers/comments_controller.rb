@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
 			comment.victim_id = params[:victim_id]
       comment.good_bad = params[:good_bad]
       comment.anonymous = params[:anonymous]
+      # comment.name = User.find
 
 			# comment.save
 		end
