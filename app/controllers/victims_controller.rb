@@ -14,6 +14,9 @@ class VictimsController < ApplicationController
   # GET /victims/1.json
   def show
     @victim = Victim.find(params[:id])
+    @comment = @victim.comments.build
+    @current_user = @comment.user_id
+    @comments = Comment.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -21,8 +24,8 @@ class VictimsController < ApplicationController
     end
   end
 
-  GET /victims/new
-  GET /victims/new.json
+  # GET /victims/new
+  # GET /victims/new.json
   def new
     @victim = Victim.new
 
@@ -32,7 +35,7 @@ class VictimsController < ApplicationController
     end
   end
 
-  GET /victims/1/edit
+  # GET /victims/1/edit
   def edit
     @victim = Victim.find(params[:id])
   end
