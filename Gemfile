@@ -17,11 +17,11 @@ group :assets do
 end
 gem 'jquery-rails'
 gem 'haml-rails'
-gem 'omniauth'
-gem 'omniauth-facebook'
+gem 'omniauth', '~> 1.1.1'
+gem 'omniauth-facebook', '~> 1.4.1'
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
+  gem 'binding_of_caller'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
