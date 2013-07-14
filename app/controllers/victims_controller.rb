@@ -44,11 +44,13 @@ class VictimsController < ApplicationController
   def create
     @facebook_url = params[:victim][:facebook_url]
     @victim_candidate_hash = Victim.authenticate_victim(@facebook_url)
-    @victim = Victim.find_or_initialize_by_facebook_url(@facebook_url) 
-    @victim.name = @victim_candidate_hash[:name] unless @victim.persisted?
-
+    @victim = Victim.find_or_initialize_by_facebook_url(@facebook_url) # .update_attributes(:name => @victim_candidate_hash[:name]) 
+    @victim.assign_attributes(:name => @victim_candidate_hash['name'])
     respond_to do |format|
-      if @victim.save
+      if @victim.persisted? && @victim.save
+        format.html { redirect_to @victim, notice: 'That victim exists. ' }
+        format.json { render json: @victim, status: :created, location: @victim }
+      elsif @victim.save
         format.html { redirect_to @victim, notice: 'Victim was successfully created.' }
         format.json { render json: @victim, status: :created, location: @victim }
       else
