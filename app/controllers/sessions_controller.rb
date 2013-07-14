@@ -21,6 +21,9 @@ class SessionsController < ApplicationController
 
   end
 
+  def index
+  end
+
   def destroy
     reset_session
     redirect_to root_url, :notice => 'Signed out!'

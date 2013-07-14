@@ -14,7 +14,9 @@ class VictimsController < ApplicationController
   # GET /victims/1.json
   def show
     @victim = Victim.find(params[:id])
-
+    @comment = @victim.comments.build
+    @current_user = @comment.user_id
+    @comments = Comment.all
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @victim }
@@ -40,11 +42,16 @@ class VictimsController < ApplicationController
   # POST /victims
   # POST /victims.json
   def create
-    @victim = Victim.new(params[:victim])
-
+    @facebook_url = params[:victim][:facebook_url]
+    @victim_candidate_hash = Victim.authenticate_victim(@facebook_url)
+    @victim = Victim.find_or_initialize_by_facebook_url(@facebook_url) # .update_attributes(:name => @victim_candidate_hash[:name]) 
+    @victim.assign_attributes(:name => @victim_candidate_hash['name'], :gender => @victim_candidate_hash['gender'])
     respond_to do |format|
-      if @victim.save
-        format.html { redirect_to @victim, notice: 'Victim was successfully created.' }
+      if @victim.persisted?
+        format.html { redirect_to @victim, notice: "#{@victim.name} is already in here. Go ahead and add your comment." }
+        format.json { render json: @victim, status: :created, location: @victim }
+      elsif @victim.save
+        format.html { redirect_to @victim, notice: "You successfully invited #{@victim.name} to the bathroom." }
         format.json { render json: @victim, status: :created, location: @victim }
       else
         format.html { render action: "new" }

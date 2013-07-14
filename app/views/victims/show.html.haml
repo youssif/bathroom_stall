@@ -1,4 +1,4 @@
-%p#notice= notice
+/ %p#notice= notice
 
 %p
   %b Name:
@@ -13,9 +13,50 @@
   %b City:
   = @victim.city
 
-%h3 Add a Review
-= render 'formreview'
 
 = link_to 'Edit', edit_victim_path(@victim)
 \|
 = link_to 'Back', victims_path
+
+%h2 Stall Scrawl
+- @comments.each do |comment|
+  - if comment.victim_id == @victim.id
+    %tr
+      %td= comment.message
+      %td= comment.good_bad
+      %td= comment.anonymous
+    %br
+
+%h3 Post your review
+= form_for [@victim, @comment] do |f|
+  - if @comment.errors.any?
+    #error_explanation
+      %h2= pluralize(@comment.errors.count, "error") + 'prohibited this comment from being saved.'
+    %ul
+      = @victim.errors.full_messages.each do |msg|
+        %li= msg
+
+  %div.good_or_bad
+    %h5 Your overall impression of this person 
+    %input{:name => "good_bad", :type => "radio", :value => "Thumbs up!"}
+    Thumbs up!                  
+    %br/                      
+    %input{:name => "good_bad", :type => "radio", :value => "Meh..."}  
+    Meh...
+
+  %div.anonymous_or_not
+    %h5 Anonymity Settings
+    %input{:name => "anonymous", :type => "radio", :value => "not_anonymous"}
+    I'll own what I say.                
+    %br/                      
+    %input{:name => "anonymous", :type => "radio", :value => "anonymous"}  
+    Keep me anonymous.
+  %div.whatthink
+    = f.text_area :message, :placeholder => "What do you think?"
+
+
+  .field
+    
+
+  .actions= f.submit
+

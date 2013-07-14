@@ -4,9 +4,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    
   end
 
-    def edit
+  def edit
     @user = User.find(params[:id])
   end
   
@@ -20,8 +21,9 @@ class UsersController < ApplicationController
   end
 
 
-def show
+  def show
     @user = User.find(params[:id])
+    # @user_photo = User.user_photo()
   end
 
 end

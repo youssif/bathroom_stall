@@ -55,4 +55,54 @@
 	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
 	    font-weight: normal;
 	    font-style: normal; }
+
 */
+.navigation{
+	font-family: 'Rock Salt', cursive;
+	text-decoration: none;
+	padding: 1em;
+	margin-bottom: 5em;
+	height: 6em;
+	background-color: #FFDAAA;
+};
+
+.navigation:visited{
+	text-decoration: none;
+}
+
+div.credentials{
+	float: right;
+	font-size: 1.25em;
+}
+
+a.brand{
+	text-decoration: none;
+	font-size: 3em;
+	padding-top: 0.5em;
+}
+
+a.smallbrand{
+	font-family: 'Rock Salt';
+	font-size: .8em;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+a.brand:visited{
+	text-decoration: none;
+	color: #FF6599;
+}
+
+#Credits    {
+	position: absolute;
+	bottom: 0;
+  width: 98%;
+  font-size: 11px;
+  text-align: center; 
+  padding: 20px 10px;
+  letter-spacing: 0.09em;
+  background-color: #FFDAAA;
+}
+

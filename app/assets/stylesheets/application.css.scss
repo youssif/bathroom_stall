@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
 */
+
 .brand {
   float: left;
   padding-right: 8px;
@@ -21,7 +22,7 @@ ul.nav {
   padding: 0;
 }
 ul.nav li {
-  display: inline;
+  display: inline
 }
 #flash_notice, #flash_alert {
   padding: 5px 8px;
