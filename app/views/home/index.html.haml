@@ -1,4 +1,16 @@
 %h3 Home
 - @users.each do |user|
-  %p
-    User: #{link_to user.name, user}
+  .get_started
+    .start_title
+      %h3 Get rating!
+      
+      .find_victims
+        / search using https://rubygems.org/gems/sunspot
+        = link_to 'Browse Peeps to Review', victims_path
+      .create_victims
+        = link_to 'Review a New Peep', new_victim_path
+
+
+  / Need to path to victims
+  / Need to path to victim creation
+
