@@ -1,0 +1,36 @@
+<div class="victim_form">
+  <%= form_for(@victim) do |f| %>
+    <% if @victim.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@victim.errors.count, "error") %> prohibited this flock from being saved:</h2>
+
+        <ul>
+        <% @victim.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    
+    
+      <form class="victim_form", action="/victim/create", method="post">
+        <div class="form_div">
+          <h3> Review </h3>
+          Rating: Good or bad? <input type="radio" class="input" name="victim[][good_or_bad]" value="Good"> 
+          <input type="radio" class="input" name="victim[][good_or_bad]" value="Bad"> <br />
+          Write your review: <input type="text" class="input" name="victim[][name]"> <br />
+          gender: <input type="text" class="input" name="victim[][review]"> <br />
+          
+        </div>
+
+
+        <div class="actions">
+          <input type="submit" value="Save", class: "victim_create" %>
+        </div>
+
+      </form>
+    
+    
+  <% end %>
+</div>

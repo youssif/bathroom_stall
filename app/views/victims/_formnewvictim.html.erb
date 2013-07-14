@@ -1,0 +1,35 @@
+<div class="victim_form">
+  <%= form_for(@victim) do |f| %>
+    <% if @victim.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@victim.errors.count, "error") %> prohibited this flock from being saved:</h2>
+
+        <ul>
+        <% @victim.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    
+    
+      <form class="victim_form", action="/victim/create", method="post">
+        <div class="form_div">
+          <h3> Who would you like to review? </h3>
+          Link to Facebook profile: <input type="text" class="input" name="victim[][handle]"> <br />
+          Name: <input type="text" class="input" name="victim[][name]"> <br />
+          gender: <input type="text" class="input" name="victim[][gender]"> <br />
+          City: <input type="text" class="input" name="victim[][city]"> <br />
+        </div>
+
+
+        <div class="actions">
+          <input type="submit" value="Save", class: "victim_create" %>
+        </div>
+
+      </form>
+    
+    
+  <% end %>
+</div>
