@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @victim.name
+%p
+  %b Facebook url:
+  = @victim.facebook_url
+%p
+  %b Gender:
+  = @victim.gender
+%p
+  %b City:
+  = @victim.city
+
+= link_to 'Edit', edit_victim_path(@victim)
+\|
+= link_to 'Back', victims_path

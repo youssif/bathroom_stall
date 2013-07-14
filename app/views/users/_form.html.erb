@@ -1,0 +1,36 @@
+<div class="hatch_form">
+  <%= form_for(@victim) do |f| %>
+    <% if @victim.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@victim.errors.count, "error") %> prohibited this flock from being saved:</h2>
+
+        <ul>
+        <% @victim.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    
+    
+      <form class="victim_form", action="/victim/create", method="post">
+        <div class="form_div">
+          <h3> Who would you like to review? </h3>
+          Link to Facebook profile: <input type="text" class="input" name="victim[][handle]"> <br />
+          E-mail Address: <input type="text" class="input" name="tweeters[][email]"> <br />
+          Name: <input type="text" class="input" name="tweeters[][name]"> <br />
+
+        </div>    
+        
+        <input type="button" name="add" class="new_tweeter" value="Add a Tweeter" />
+
+        <div class="actions">
+          <input type="submit" value="Get Flocking!", class: "flock_create" %>
+        </div>
+
+      </form>
+    
+    
+  <% end %>
+</div>
