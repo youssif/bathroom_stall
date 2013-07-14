@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130714053158) do
+ActiveRecord::Schema.define(:version => 20130714195334) do
 
   create_table "comments", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(:version => 20130714053158) do
     t.text     "message"
     t.integer  "user_id"
     t.integer  "victim_id"
+    t.string   "good_bad"
+    t.string   "anonymous"
   end
 
   create_table "users", :force => true do |t|
