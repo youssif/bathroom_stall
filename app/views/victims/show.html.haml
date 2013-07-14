@@ -23,6 +23,7 @@
 
 - @comments.each do |comment|
   %p= comment.message
+  =puts comment.message
 
 %h3 Add A Comment
 = form_for [@victim, @comment] do |f|
