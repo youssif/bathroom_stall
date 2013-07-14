@@ -17,10 +17,10 @@
       <form class="victim_form", action="/victim/create", method="post">
         <div class="form_div">
           <h3> Who are you writing about? </h3> <br />
-          Facebook URL: <input type="text" class="input" name="victim[][facebookurl]"> <br />
-          Name: <input type="text" class="input" name="victim[][name]"> <br />
-          Gender: <input type="text" class="input" name="victim[][gender]"> <br />
-          City: <input type="text" class="input" name="victim[][city]"> <br />
+          Facebook URL: <%= f.text_field :facebook_url, :autofocus => true %> <br />
+          Name: <%= f.text_field :name, :autofocus => true %> <br />
+          Gender: <%= f.text_field :gender, :autofocus => true %> <br />
+          City: <%= f.text_field :city, :autofocus => true %> <br />
         </div>
 
 
