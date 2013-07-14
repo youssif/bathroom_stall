@@ -1,6 +1,6 @@
 class VictimsController < ApplicationController
-  GET /victims
-  GET /victims.json
+  # GET /victims
+  # GET /victims.json
   def index
     @victims = Victim.all
 
@@ -37,8 +37,8 @@ class VictimsController < ApplicationController
     @victim = Victim.find(params[:id])
   end
 
-  POST /victims
-  POST /victims.json
+  # POST /victims
+  # POST /victims.json
   def create
     @victim = Victim.new(params[:victim])
 
@@ -53,8 +53,8 @@ class VictimsController < ApplicationController
     end
   end
 
-  PUT /victims/1
-  PUT /victims/1.json
+  # PUT /victims/1
+  # PUT /victims/1.json
   def update
     @victim = Victim.find(params[:id])
 
@@ -69,8 +69,8 @@ class VictimsController < ApplicationController
     end
   end
 
-  DELETE /victims/1
-  DELETE /victims/1.json
+  # DELETE /victims/1
+  # DELETE /victims/1.json
   def destroy
     @victim = Victim.find(params[:id])
     @victim.destroy
