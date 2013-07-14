@@ -1,4 +1,3 @@
-/ %p#notice= notice
 
 %p
   %b Name:
@@ -9,9 +8,9 @@
 %p
   %b Gender:
   = @victim.gender
-%p
-  %b City:
-  = @victim.city
+/ %p
+/   %b City:
+/   = @victim.city
 
 
 = link_to 'Edit', edit_victim_path(@victim)
@@ -19,46 +18,24 @@
 = link_to 'Back', victims_path
 
 %h2 Stall Scrawl
-- @comments.each do |comment|
-  - if comment.victim_id == params[:victim_id]
-    %tr
-      %td= comment.message
-      %td= comment.good_bad
-      %td= comment.anonymous
-      / Show user or not here
-    %br
-    
 
-%h3 Post your review
+- @comments.each do |comment|
+  %p= comment.message
+  =puts comment.message
+
+%h3 Add A Comment
 = form_for [@victim, @comment] do |f|
   - if @comment.errors.any?
     #error_explanation
       %h2= pluralize(@comment.errors.count, "error") + 'prohibited this comment from being saved.'
-    %ul
-      = @victim.errors.full_messages.each do |msg|
-        %li= msg
-
-    %div.good_or_bad
-      %h5 Your overall impression of this person 
-      %input{:name => "good_bad", :type => "radio", :value => "Thumbs up!"}
-      Thumbs up!                  
-      %br/                      
-      %input{:name => "good_bad", :type => "radio", :value => "Meh..."}  
-      Meh...
-
-    %div.anonymous_or_not
-      %h5 Anonymity Settings
-      %input{:name => "anonymous", :type => "radio", :value => "not_anonymous"}
-      I'll own what I say.                
-      %br/                      
-      %input{:name => "anonymous", :type => "radio", :value => "anonymous"}  
-      Keep me anonymous.
-    %div.whatthink
-      = f.text_area :message, :placeholder => "What do you think?"
-
+  %ul
+    = @victim.errors.full_messages.each do |msg|
+      %li= msg
 
   .field
-    
+  
+    = f.text_area :message, :placeholder => "What do you think?"
 
   .actions= f.submit
 
+= params.inspect
