@@ -3,8 +3,9 @@ class CommentsController < ApplicationController
 
   def create
   		@comment = Comment.find(params[:id])
-  		@current_user = @comment.user_id
-		@comment = @current_user.comments.create(params[:comment]).merge(victim_id: params[:victim_id])
+  		@user_id = @comment.user_id
+  		@current_user = User.find(@user_id)
+			@comment = @current_user.comments.create(params[:comment]).merge(victim_id: params[:victim_id])
 		redirect_to :back
 	end
 
