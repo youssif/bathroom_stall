@@ -2,6 +2,8 @@ class CommentsController < ApplicationController
 	before_filter :redirect_back_unless_logged_in
 
   def create
+  		@comment = Comment.find(params[:id])
+  		@current_user = @comment.user_id
 		@comment = @current_user.comments.create(params[:comment]).merge(victim_id: params[:victim_id])
 		redirect_to :back
 	end

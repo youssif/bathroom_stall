@@ -13,6 +13,8 @@
   %b City:
   = @victim.city
 
+
+
 = link_to 'Edit', edit_victim_path(@victim)
 \|
 = link_to 'Back', victims_path
@@ -20,5 +22,20 @@
 %h2 Stall Scrawl
 
 - @comments.each do |comment|
-	%p= comment.message
+  %p= comment.message
 
+%h3 Add A Comment
+= form_for [@victim, @comment] do |f|
+  - if @comment.errors.any?
+    #error_explanation
+      %h2= pluralize(@comment.errors.count, "error") + 'prohibited this comment from being saved.'
+  %ul
+    = @victim.errors.full_messages.each do |msg|
+      %li= msg
+
+  .field
+    = f.text_area :message, :placeholder => "What do you think?"
+
+  .actions= f.submit
+
+= params.inspect
