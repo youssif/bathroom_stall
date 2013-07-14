@@ -20,11 +20,12 @@
 
 %h2 Stall Scrawl
 - @comments.each do |comment|
-  %tr
-    %td= comment.message
-    %td= comment.good_bad
-    %td=comment.anonymous
-    / Show user or not here
+  - if comment.victim_id == params[:victim_id]
+    %tr
+      %td= comment.message
+      %td= comment.good_bad
+      %td= comment.anonymous
+      / Show user or not here
     %br
     
 
