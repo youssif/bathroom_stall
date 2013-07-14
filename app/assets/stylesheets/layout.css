@@ -63,6 +63,7 @@
 	padding: 1em;
 	margin-bottom: 5em;
 	height: 6em;
+	background-color: #FFDAAA;
 };
 
 .navigation:visited{
@@ -102,5 +103,6 @@ a.brand:visited{
   text-align: center; 
   padding: 20px 10px;
   letter-spacing: 0.09em;
+  background-color: #FFDAAA;
 }
 
