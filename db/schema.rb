@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130713181825) do
+ActiveRecord::Schema.define(:version => 20130714053158) do
+
+  create_table "comments", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "message"
+    t.integer  "user_id"
+    t.integer  "victim_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -20,6 +28,15 @@ ActiveRecord::Schema.define(:version => 20130713181825) do
     t.string   "uid"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "victims", :force => true do |t|
+    t.string   "name"
+    t.string   "facebook_url"
+    t.string   "gender"
+    t.string   "city"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
 end
