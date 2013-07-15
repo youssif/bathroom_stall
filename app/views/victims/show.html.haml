@@ -1,61 +1,61 @@
-
-%p
-  %b Name:
-  = @victim.name
-%p
-  %b Facebook url:
-  = @victim.facebook_url
-%p
-  %b Gender:
-  = @victim.gender
-/ %p
-/   %b City:
-/   = @victim.city
-
-
-= link_to 'Edit', edit_victim_path(@victim)
-\|
-= link_to 'Back', victims_path
-
-%h2 Stall Scrawl
-
-.review_container
-  - @comments.each do |comment|
-    - if comment.victim_id == @victim.id
-      .review
-        .poster=comment.anonymous
-        .reviewtext= comment.message
-        .goodbad= comment.good_bad
-        
+.container
+  .twelve.columns.add-bottom
+    %h1.victim_name
+      = @victim.name
+    / %p
+    /   %b City:
+    /   = @victim.city
+    .img_tag
+      = image_tag(@profile_pic)
+    .edit_options
+      = link_to 'Edit', edit_victim_path(@victim)
+      \|
+      = link_to 'Back', victims_path
     %br
+    %br
+    %br
+    %br
+    %h2 Stall Scrawl
 
-%h3 Add A Comment
-= form_for [@victim, @comment] do |f|
-  - if @comment.errors.any?
-    #error_explanation
-      %h2= pluralize(@comment.errors.count, "error") + 'prohibited this comment from being saved.'
+    .review_container
+      - @comments.each do |comment|
+        - if comment.victim_id == @victim.id
+          .review
+            .poster=comment.anonymous
+            .reviewtext= comment.message
+            .goodbad= comment.good_bad
+            
+        %br
 
-    %ul
-      = @victim.errors.full_messages.each do |msg|
-        %li= msg
+    %h3 Add A Comment
+    = form_for [@victim, @comment] do |f|
+      - if @comment.errors.any?
+        #error_explanation
+          %h2= pluralize(@comment.errors.count, "error") + 'prohibited this comment from being saved.'
 
-  %div.good_or_bad
-    %h5 Your overall impression of this person 
-    %input{:name => "good_bad", :type => "radio", :value => "Thumbs up!"}
-    Thumbs up!                  
-    %br/                      
-    %input{:name => "good_bad", :type => "radio", :value => "Meh..."}  
-    Meh...
+        %ul
+          = @victim.errors.full_messages.each do |msg|
+            %li= msg
 
-  %div.anonymous_or_not
-    %h5 Anonymity Settings
-    %input{:name => "anonymous", :type => "radio", :value => User.last.name}
-    I'll own what I say.                
-    %br/                      
-    %input{:name => "anonymous", :type => "radio", :value => "Anonymous"}  
-    Keep me anonymous.
-  %div.whatthink
-    = f.text_area :message, :placeholder => "What do you think?"
 
-  .actions= f.submit "Save Review"
+      %div.whatthink
+        = f.text_area :message, :placeholder => "What do you think of #{@victim.name}?", :class => "text_area"
+
+      .good_or_bad
+        %h5 #{@victim.name} gets ... 
+        %input{:name => "good_bad", :type => "radio", :value => "Thumbs up!"} 
+        A big thumbs up from me!
+        %br                     
+        %input{:name => "good_bad", :type => "radio", :value => "Meh..."}  
+        Not a lot of love.
+
+      .anonymous_or_not
+        %h5 Anonymity Settings
+        %input{:name => "anonymous", :type => "radio", :value => User.last.name}
+        <strong><em>Post my name</em></strong> for #{@victim.name} and everyone else to see.          
+        %br/                      
+        %input{:name => "anonymous", :type => "radio", :value => "Anonymous"}  
+        Keep me <strong><em>anonymous</em></strong>.
+
+      .actions= f.submit "Save Review"
 
