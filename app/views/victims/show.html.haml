@@ -51,11 +51,12 @@
 
       .anonymous_or_not
         %h5 Anonymity Settings
-        %input{:name => "anonymous", :type => "radio", :value => User.last.name}
+        %input{:name => "anonymous", :type => "radio", :value => current_user.name}
         <strong><em>Post my name</em></strong> for #{@victim.name} and everyone else to see.          
         %br/                      
         %input{:name => "anonymous", :type => "radio", :value => "Anonymous"}  
         Keep me <strong><em>anonymous</em></strong>.
 
       .actions= f.submit "Save Review"
+
 
