@@ -8,6 +8,9 @@
 %p
   %b Gender:
   = @victim.gender
+%p
+  %b Profile Pic:
+  = image_tag(@profile_pic, alt: "#{@victim.name} profile pic")
 / %p
 /   %b City:
 /   = @victim.city
