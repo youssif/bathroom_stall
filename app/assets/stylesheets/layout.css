@@ -58,28 +58,13 @@
 
 */
 .navigation{
-	padding: 1em;
-	width: 99%;
-	margin-top: 0.6em;
-	margin-left: 0em;
-	border-radius: 0.3em;
-	box-shadow: 1px 1px 1px rgb(228, 227, 221);
-	background: #1e9a91; /* Old browsers */
-	background: -moz-linear-gradient(-45deg,  #1e9a91 0%, #2ad8be 99%, #20cab3 99%, #7ee8d6 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#1e9a91), color-stop(99%,#2ad8be), color-stop(99%,#20cab3), color-stop(100%,#7ee8d6)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* IE10+ */
-	background: linear-gradient(135deg,  #1e9a91 0%,#2ad8be 99%,#20cab3 99%,#7ee8d6 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e9a91', endColorstr='#7ee8d6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 	font-family: 'Rock Salt', cursive;
 	text-decoration: none;
 	padding: 1em;
 	margin-bottom: 5em;
 	height: 6em;
+	background-color: #FFDAAA;
 };
-
-
 
 .navigation:visited{
 	text-decoration: none;
@@ -87,13 +72,18 @@
 
 div.credentials{
 	float: right;
+	font-size: 1.25em;
 }
 
 a.brand{
 	text-decoration: none;
 	font-size: 3em;
 	padding-top: 0.5em;
-	color: rgb(230, 234, 235);
+}
+
+a.smallbrand{
+	font-family: 'Rock Salt';
+	font-size: .8em;
 }
 
 a:visited{
@@ -102,6 +92,17 @@ a:visited{
 
 a.brand:visited{
 	text-decoration: none;
-	color: rgb(230, 234, 235);
+	color: #FF6599;
+}
+
+#Credits    {
+	position: absolute;
+	bottom: 0;
+  width: 98%;
+  font-size: 11px;
+  text-align: center; 
+  padding: 20px 10px;
+  letter-spacing: 0.09em;
+  background-color: #FFDAAA;
 }
 
