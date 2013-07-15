@@ -74,7 +74,6 @@ body{
 	font-family: 'Rock Salt', cursive;
 	text-decoration: none;
 	padding: 1em;
-	margin-bottom: 1em;
 	height: 6em;
 	box-shadow: 0px 1px 1px gray;
 	border-radius: 2px;
@@ -86,7 +85,7 @@ body{
 	background: -ms-linear-gradient(top,  rgba(0,0,0,1) 0%,rgba(37,40,12,1) 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  rgba(0,0,0,1) 0%,rgba(37,40,12,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#25280c',GradientType=0 ); /* IE6-9 */
-
+	margin-bottom: -2em;
 };
 
 
@@ -152,7 +151,7 @@ a.brand:visited{
 
 #footer p{
 	color: rgb(199, 187, 147);
-	
+
 }
 
 #bigdiv {
