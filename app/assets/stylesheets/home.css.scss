@@ -1,3 +1,36 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.start{
+	width: 95%;
+	border-radius: 4px;
+	height: 20em;
+	box-shadow: 1px 1px 1px rgb(147, 147, 228);
+
+}
+
+h3{
+	padding-top: 24px;
+}
+
+.find{
+	border: solid;
+	width: 60%;
+	border-radius: 7px;
+	height: 57px;
+	margin-left: 0em;
+	margin-top: 2em;
+}
+
+.create{
+	border: solid;
+	width: 60%;
+	border-radius: 7px;
+	height: 57px;
+	margin-top: 1.5em;
+}
+
+h5{
+	margin-top: 13px;
+}

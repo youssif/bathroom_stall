@@ -49,7 +49,7 @@
 
   %div.anonymous_or_not
     %h5 Anonymity Settings
-    %input{:name => "anonymous", :type => "radio", :value => User.last.name}
+    %input{:name => "anonymous", :type => "radio", :value => current_user.name}
     I'll own what I say.                
     %br/                      
     %input{:name => "anonymous", :type => "radio", :value => "Anonymous"}  
