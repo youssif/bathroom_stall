@@ -6,6 +6,10 @@ class CommentsController < ApplicationController
 		@comment = Comment.create(params[:comment]) do |comment|
 			comment.user_id = session[:user_id]
 			comment.victim_id = params[:victim_id]
+      comment.good_bad = params[:good_bad]
+      comment.anonymous = params[:anonymous]
+      # comment.name = User.find
+
 			# comment.save
 		end
 
