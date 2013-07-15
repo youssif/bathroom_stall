@@ -1,24 +1,21 @@
-%h1 The Good, the bad, the reviewed
-%h3 Click on a Name to See a Person's Reviews!
+.container
+  %h1.title The Good, the Bad, the Reviewed
+  %h3 
+    Find your person below, or create a new person 
+    =link_to "here.", new_victim_path
+  %br
+  %br
+  %hr
 
-%table
-  %tr
-    %th Name
-    / %th Facebook url
-    / %th Gender
-    %th City
-    
+    - @victims.each do |victim|
+      .holder
+        - @photo = victim.find_profile_photo
+        %p
+          .image= image_tag(@photo, :height => '50', :width => '50')
+          .listname=link_to victim.name, victim
+          %br
 
-  - @victims.each do |victim|
-    %tr
-      %td= link_to victim.name, victim
-      / %td= victim.facebook_url
-      / %td= victim.gender
-      %td= victim.city
-      / %td= 'reviews.count' 
-      / %td= link_to 'Edit', edit_victim_path(victim)
-      / %td= link_to 'Destroy', victim, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        / %td= link_to 'Edit', edit_victim_path(victim)
+        / %td= link_to 'Destroy', victim, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
 
-= link_to 'New Victim', new_victim_path

@@ -49,6 +49,12 @@
 		border-collapse: collapse;
 		border-spacing: 0; }
 
+/* footer */
+  #wrap {min-height: 100%;}
+
+	#main {overflow:auto;
+	 padding-bottom: 25px;}
+
 
 
 /* #Basic Styles
@@ -85,11 +91,11 @@
 	small { font-size: 80%; }
 
 /*	Blockquotes  */
-	blockquote, blockquote p { font-size: 20px; line-height: 50px; color: #4CA2DE; font-style: italic; }
+	/*blockquote, blockquote p { font-size: 20px; line-height: 50px; color: #4CA2DE; font-style: italic; }
 	blockquote { margin: 0 0 20px 0; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
 	blockquote cite { display: block; font-size: 18px; color: #98CBEF; }
 	blockquote cite:before { content: "\2014 \0020"; }
-	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }*/
 
 	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
 

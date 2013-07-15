@@ -3,32 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #main{
-	margin-bottom: 7em;
+	margin-bottom: 0em;
 }
 
 .start{
-	width: 60%;
+	width: 57%;
 	border-radius: 3px;
 	height: 20em;
 	box-shadow: 5px 7px 28px gray;
 	border: 1px solid #05575a;
-	background: rgb(76,162,222); /* Old browsers */
-	background: -moz-linear-gradient(left,  rgba(76,162,222,1) 0%, rgba(96,171,248,1) 56%, rgba(126,180,234,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(76,162,222,1)), color-stop(56%,rgba(96,171,248,1)), color-stop(100%,rgba(126,180,234,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left,  rgba(76,162,222,1) 0%,rgba(96,171,248,1) 56%,rgba(126,180,234,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left,  rgba(76,162,222,1) 0%,rgba(96,171,248,1) 56%,rgba(126,180,234,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left,  rgba(76,162,222,1) 0%,rgba(96,171,248,1) 56%,rgba(126,180,234,1) 100%); /* IE10+ */
-	background: linear-gradient(to right,  rgba(76,162,222,1) 0%,rgba(96,171,248,1) 56%,rgba(126,180,234,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ca2de', endColorstr='#7eb4ea',GradientType=1 ); /* IE6-9 */
-
+	background: #4ca2de;
+	background: -moz-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #4ca2de), color-stop(56%, #60abf8), color-stop(100%, #7eb4ea));
+	background: -webkit-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+	background: -o-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+	background: -ms-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+	background: linear-gradient(to right, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ca2de', endColorstr='#7eb4ea',GradientType=1 );
 	float: left;
-	margin-left: 15em;
+	margin-left: 11em;
 	margin-bottom: 3em;
 	margin-top: 4em;
 	-webkit-box-shadow: 0 0 14px gray;
 	box-shadow: 0 0 30px gray;
-
-
+	position:relative;
 }
 
 h3{
@@ -65,10 +63,10 @@ h4{
 
 .find{
 	border: 1px solid rgb(5, 87, 90);
-	width: 48%%;
+	width: 17em;
 	border-radius: 7px;
 	height: 57px;
-	margin-left: 0em;
+	margin-left: 12.5em;
 	margin-top: 1.5em;
 	box-shadow: 1px 1px 1px #05575a;
 	background: rgb(194,197,198); /* Old browsers */
@@ -79,17 +77,18 @@ h4{
 	background: -ms-linear-gradient(left,  rgba(194,197,198,1) 0%,rgba(202,205,206,1) 64%,rgba(232,234,234,1) 100%); /* IE10+ */
 	background: linear-gradient(to right,  rgba(194,197,198,1) 0%,rgba(202,205,206,1) 64%,rgba(232,234,234,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2c5c6', endColorstr='#e8eaea',GradientType=1 ); /* IE6-9 */
+	position: absolute;
 
 
 }
 
 .create{
 	border: 1px solid rgb(5, 87, 90);
-	width: 48%;
+	width: 17em;
 	border-radius: 7px;
 	height: 57px;
-	margin-left: 0em;
-	margin-top: 1em;
+	margin-left: 12.5em;
+	margin-top: 7em;
 	box-shadow: 1px 1px 1px #05575a;
 	background: rgb(194,197,198); /* Old browsers */
 	background: -moz-linear-gradient(left,  rgba(194,197,198,1) 0%, rgba(202,205,206,1) 64%, rgba(232,234,234,1) 100%); /* FF3.6+ */
@@ -99,11 +98,11 @@ h4{
 	background: -ms-linear-gradient(left,  rgba(194,197,198,1) 0%,rgba(202,205,206,1) 64%,rgba(232,234,234,1) 100%); /* IE10+ */
 	background: linear-gradient(to right,  rgba(194,197,198,1) 0%,rgba(202,205,206,1) 64%,rgba(232,234,234,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2c5c6', endColorstr='#e8eaea',GradientType=1 ); /* IE6-9 */
-
+	position: absolute;
 
 }
 
-h3{
+h3.what{
 	margin-top: 1em;
 	font-size: 33px;
 	line-height: 34px;
@@ -111,8 +110,8 @@ h3{
 }
 
 h5{
-	margin-top: 15px;
 	font-family: verdana;
-	font-size: 1.3em;
+	font-size: 1em;
 	text-shadow: 0.5px 1px gray;
+	margin: 1.2em;
 }
