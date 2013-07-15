@@ -27,4 +27,27 @@
 
 .anonymous_or_not {
 	display:inline;
+
+/* ref to read and write pages*/
+
+.title {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.listname {
+  font-weight: bold;
+  font-size: 40px;
+  vertical-align: middle;
+  float: left;
+  margin-left: 20px;
+}
+
+.image {
+  vertical-align: middle;
+  float: left;
+}
+
+.holder {
+  line-height: 50px;
 }
