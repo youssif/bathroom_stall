@@ -50,6 +50,7 @@
 		border-spacing: 0; }
 
 
+
 /* #Basic Styles
 ================================================== */
 	body {
@@ -84,9 +85,9 @@
 	small { font-size: 80%; }
 
 /*	Blockquotes  */
-	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
-	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
-	blockquote cite { display: block; font-size: 12px; color: #555; }
+	blockquote, blockquote p { font-size: 40px; line-height: 50px; color: #4CA2DE; font-style: italic; }
+	blockquote { margin: 0 0 20px 0; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
+	blockquote cite { display: block; font-size: 18px; color: #98CBEF; }
 	blockquote cite:before { content: "\2014 \0020"; }
 	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
 

@@ -1,6 +1,5 @@
 %div.navigation
   = link_to "Bathroom Stall", root_path, :class => 'brand'
-  %br
   %div.credentials
     - if user_signed_in?
       %p
@@ -17,3 +16,8 @@
         = link_to "Read", victims_path, :class => 'smallbrand'
         |
         = link_to 'Login', signin_path, :class => 'smallbrand'
+  %br
+  %br
+  %br
+  %p.tag
+    The People Reviewer

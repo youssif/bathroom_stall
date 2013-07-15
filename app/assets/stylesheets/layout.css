@@ -63,22 +63,26 @@
 	padding: 1em;
 	margin-bottom: 5em;
 	height: 6em;
-	background-color: #FFDAAA;
+	background-color: #FFC579;
 };
 
 .navigation:visited{
 	text-decoration: none;
 }
 
+p.tag {
+	padding-left: 130px;
+}
+
 div.credentials{
 	float: right;
-	font-size: 1.25em;
 }
 
 a.brand{
 	text-decoration: none;
 	font-size: 3em;
 	padding-top: 0.5em;
+	color: #4CA2DE;
 }
 
 a.smallbrand{
@@ -92,17 +96,19 @@ a:visited{
 
 a.brand:visited{
 	text-decoration: none;
-	color: #FF6599;
 }
 
 #Credits    {
-	position: absolute;
-	bottom: 0;
+	position: relative;
   width: 98%;
   font-size: 11px;
   text-align: center; 
   padding: 20px 10px;
   letter-spacing: 0.09em;
   background-color: #FFDAAA;
+}
+
+#bigdiv {
+	padding-top: 50px;
 }
 

@@ -17,9 +17,11 @@ class VictimsController < ApplicationController
     @comment = @victim.comments.build
     @current_user = @comment.user_id
     @comments = Comment.all
+    @profile_pic = @victim.find_profile_photo
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @victim }
+
     end
   end
 
@@ -45,7 +47,7 @@ class VictimsController < ApplicationController
     @facebook_url = params[:victim][:facebook_url]
     @victim_candidate_hash = Victim.authenticate_victim(@facebook_url)
     @victim = Victim.find_or_initialize_by_facebook_url(@facebook_url) # .update_attributes(:name => @victim_candidate_hash[:name]) 
-    @victim.assign_attributes(:name => @victim_candidate_hash['name'], :gender => @victim_candidate_hash['gender'])
+    @victim.assign_attributes(:name => @victim_candidate_hash['name'], :gender => @victim_candidate_hash['gender'], :facebook_id => @victim_candidate_hash['id'])
     respond_to do |format|
       if @victim.persisted?
         format.html { redirect_to @victim, notice: "#{@victim.name} is already in here. Go ahead and add your comment." }
