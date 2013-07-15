@@ -61,7 +61,7 @@
 	font-family: 'Rock Salt', cursive;
 	text-decoration: none;
 	padding: 1em;
-	margin-bottom: 5em;
+	margin-bottom: 1em;
 	height: 6em;
 	background-color: #FFC579;
 	box-shadow: 0px 1px 1px gray;
@@ -74,9 +74,7 @@
 	text-decoration: none;
 }
 
-.start{
-	border: 2px solid red;
-}
+
 
 p.tag {
 	padding-left: 130px;

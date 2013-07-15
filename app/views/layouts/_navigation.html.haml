@@ -6,9 +6,9 @@
         Logged in as
         = link_to current_user.name, user_path(current_user.id)
         %br
-        = link_to "Read", victims_path, :class => 'smallbrand'
+        = link_to "Review", victims_path, :class => 'smallbrand'
         |
-        = link_to "Write", new_victim_path, :class => 'smallbrand'
+        = link_to "New", new_victim_path, :class => 'smallbrand'
         |
         = link_to 'Logout', signout_path, :class => 'smallbrand'
     - else
