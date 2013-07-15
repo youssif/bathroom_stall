@@ -23,5 +23,5 @@ module ApplicationHelper
 			else 
 				return ''
 			end
-end
+	end
 end

@@ -19,12 +19,14 @@
 
 %h2 Stall Scrawl
 
-- @comments.each do |comment|
-  - if comment.victim_id == @victim.id
-    %tr
-      %td= comment.message
-      %td= comment.good_bad
-      %td= comment.anonymous
+.review_container
+  - @comments.each do |comment|
+    - if comment.victim_id == @victim.id
+      .review
+        .poster=comment.anonymous
+        .reviewtext= comment.message
+        .goodbad= comment.good_bad
+        
     %br
 
 %h3 Add A Comment
@@ -55,5 +57,5 @@
   %div.whatthink
     = f.text_area :message, :placeholder => "What do you think?"
 
-  .actions= f.submit
+  .actions= f.submit "Save Review"
 

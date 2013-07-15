@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
 	before_filter :redirect_back_unless_logged_in
-
   def create
   	# @user_id	= Rack.find(params[:user_id]
 		@comment = Comment.create(params[:comment]) do |comment|
