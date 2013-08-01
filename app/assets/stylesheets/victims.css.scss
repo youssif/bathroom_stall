@@ -7,7 +7,11 @@
 	font-weight: bold;
 	margin-bottom: 10px;
 	display:inline-block;
-	margin-top: 0;
+	margin-top: 1em;
+}
+
+#main{
+  min-height: 80px;
 }
 
 .img_tag {
@@ -27,4 +31,62 @@
 
 .anonymous_or_not {
 	display:inline;
+}
+
+/* ref to read and write pages*/
+
+.title {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.listname {
+  font-weight: bold;
+  font-size: 40px;
+  vertical-align: middle;
+  float: left;
+  margin-left: 20px;
+}
+
+.image {
+  vertical-align: middle;
+  float: left;
+}
+
+.holder {
+  line-height: 50px;
+}
+
+div.review_container{
+  border: 1px solid rgb(151, 115, 22);
+  border-radius: 4px;
+  padding: 1em;
+  margin-bottom: 3em;
+  margin-top: 1em;
+  box-shadow: 1px 1px 1px gray;
+  background-color: white;
+}
+
+.victim_card{
+  margin-bottom: 2em;
+  border: 1px solid rgb(235, 220, 188);
+  padding: 2em;
+  border-radius: 4px;
+  background: #4ca2de;
+  background: -moz-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #4ca2de), color-stop(56%, #60abf8), color-stop(100%, #7eb4ea));
+  background: -webkit-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+  background: -o-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+  background: -ms-linear-gradient(left, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+  background: linear-gradient(to right, #4ca2de 0%, #60abf8 56%, #7eb4ea 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4ca2de', endColorstr='#7eb4ea',GradientType=1 );
+  -webkit-box-shadow: 0 0 14px gray;
+  box-shadow: 0 0 30px gray;
+  padding: 2.5em;
+}
+
+img.victim{
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid black;
 }

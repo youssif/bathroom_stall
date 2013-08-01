@@ -1,21 +1,26 @@
 .container
   .twelve.columns.add-bottom
-    %h1.victim_name
-      = @victim.name
-    / %p
-    /   %b City:
-    /   = @victim.city
-    .img_tag
-      = image_tag(@profile_pic)
-    .edit_options
-      = link_to 'Edit', edit_victim_path(@victim)
-      \|
-      = link_to 'Back', victims_path
-    %br
-    %br
-    %br
-    %br
-    %h2 Stall Scrawl
+    %center  
+      .victim_card
+        %h1.victim_name
+          = @victim.name
+        / %p
+        /   %b City:
+        /   = @victim.city
+        .img_tag
+          = image_tag(@profile_pic, :class => "victim")
+        .edit_options
+          = link_to 'Edit', edit_victim_path(@victim)
+          \|
+          = link_to 'Back', victims_path
+        %br
+        %br
+        %br
+        %br
+    %hr
+    %center
+      %h2.scrawl Stall Scrawl
+
 
     .review_container
       - @comments.each do |comment|

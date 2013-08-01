@@ -49,6 +49,12 @@
 		border-collapse: collapse;
 		border-spacing: 0; }
 
+/* footer */
+  #wrap {min-height: 100%;}
+
+	#main {overflow:auto;
+	 padding-bottom: 25px;}
+
 
 
 /* #Basic Styles
@@ -65,7 +71,7 @@
 ================================================== */
 	h1, h2, h3, h4, h5, h6 {
 		color: #181818;
-		font-family: "Georgia", "Times New Roman", serif;
+		font-family: "shadows into light", "Times New Roman", serif;
 		font-weight: normal; }
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 	h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;}
@@ -85,11 +91,15 @@
 	small { font-size: 80%; }
 
 /*	Blockquotes  */
+<<<<<<< HEAD
 	blockquote, blockquote p { font-size: 20px; line-height: 50px; color: #4CA2DE; font-style: italic; }
+=======
+	/*blockquote, blockquote p { font-size: 20px; line-height: 50px; color: #4CA2DE; font-style: italic; }
+>>>>>>> 9e9e01f88093faae0c721ea5c1b3a45fb00988c2
 	blockquote { margin: 0 0 20px 0; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
 	blockquote cite { display: block; font-size: 18px; color: #98CBEF; }
 	blockquote cite:before { content: "\2014 \0020"; }
-	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
+	blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }*/
 
 	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10px 0 30px; height: 0; }
 
