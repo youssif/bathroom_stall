@@ -2,12 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h2.scrawl{
+  font-size: 5em;
+  margin-top: 0.7em;
+}
+
 .victim_name {
-	font-size: 60px;
+	font-size: 3.5em;
 	font-weight: bold;
 	margin-bottom: 10px;
 	display:inline-block;
-	margin-top: 1em;
+	margin-top: -0.3em;
+}
+
+.scrawl_container{
+  width: 115%;
+  margin-left: 4em;
 }
 
 #main{
@@ -22,7 +32,8 @@
 }
 
 .text_area {
-	width:100%
+  width:100%;
+  height:7em;
 }
 
 .good_or_bad {
@@ -58,16 +69,15 @@
 }
 
 div.review_container{
-  border: 1px solid rgb(151, 115, 22);
   border-radius: 4px;
   padding: 1em;
   margin-bottom: 3em;
-  margin-top: 1em;
-  box-shadow: 1px 1px 1px gray;
-  background-color: white;
+  margin-top: 2em;
+
 }
 
 .victim_card{
+  float:right;
   margin-bottom: 2em;
   border: 1px solid rgb(235, 220, 188);
   padding: 2em;
@@ -83,10 +93,88 @@ div.review_container{
   -webkit-box-shadow: 0 0 14px gray;
   box-shadow: 0 0 30px gray;
   padding: 2.5em;
+  height: 19.5em;
+  width: 70%
+}
+
+.victim_card_container{
+  margin-left: -0.4em;
 }
 
 img.victim{
   width: 80%;
   border-radius: 10px;
   border: 1px solid black;
+  margin-left: -0.3em;
 }
+
+.container.victim_width{
+  margin-left: 1em;
+}
+
+.name{
+  display: inline-block;
+  margin-left: 2em;
+  margin-right: 2em;
+  width: 12em;
+  height: 9em;
+  font-weight: bold;
+  color: #47626f;
+
+}
+
+.reviewtext{
+  display: inline-block;
+  width: 39%;
+  height: 9em;
+}
+
+.goodbad{
+  display: inline-block;
+  height: 9em;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.review_title{
+    background-color: black;
+    border: 3px solid;
+    height: 5em;
+    padding-top: 2em;
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0px 0px 5px;
+}
+
+h3.review_header{
+  color:white;
+}
+
+.all_reviews{
+  border: 1px solid rgb(119, 120, 138);   
+  background: #edf1f2; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #edf1f2 1%, #eff5f7 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,#edf1f2), color-stop(100%,#eff5f7)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg,  #edf1f2 1%,#eff5f7 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg,  #edf1f2 1%,#eff5f7 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg,  #edf1f2 1%,#eff5f7 100%); /* IE10+ */
+  background: linear-gradient(45deg,  #edf1f2 1%,#eff5f7 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edf1f2', endColorstr='#eff5f7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  box-shadow: 0px 0px 5px;
+}
+
+.each_review{
+  margin-left: 3em;
+}
+
+hr.review_line{
+  width: 80%;
+  color: gray;
+}
+
+.good_or_bad{
+  margin-bottom: 3em;
+}
+
+
+
+
