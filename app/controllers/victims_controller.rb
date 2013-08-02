@@ -16,7 +16,7 @@ class VictimsController < ApplicationController
     @victim = Victim.find(params[:id])
     @comment = @victim.comments.build
     @current_user = @comment.user_id
-    @comments = Comment.all
+    @comments = Comment.all.reverse
     @profile_pic = @victim.find_profile_photo
     respond_to do |format|
       format.html # show.html.erb
