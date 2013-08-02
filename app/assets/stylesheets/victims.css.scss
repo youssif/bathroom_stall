@@ -53,20 +53,22 @@ h2.scrawl{
 
 .listname {
   font-weight: bold;
-  font-size: 40px;
-  vertical-align: middle;
-  float: left;
-  margin-left: 20px;
-}
+  font-size: 10px;
+  width:100px;
+/*  vertical-align: middle;
+  float: left;*/
+/*  margin-left: 5px;
+  margin-right: 10px;
+*/}
 
 .image {
-  vertical-align: middle;
-  float: left;
+/*  vertical-align: middle;
+  float: left;*/
 }
 
 .holder {
-  line-height: 50px;
-}
+/*  line-height: 50px;
+*/}
 
 div.review_container{
   border-radius: 4px;
@@ -180,6 +182,9 @@ hr.review_line{
   margin-bottom: 3em;
 }
 
-
+#here,
+.here {
+  float: right;
+}
 
 
