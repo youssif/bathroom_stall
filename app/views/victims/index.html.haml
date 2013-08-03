@@ -11,9 +11,9 @@
         - @photo = victim.find_profile_photo
         %div.three.columns
           = link_to victim do
-            .image= image_tag(@photo, :height => '100', :width => '100')
+            .image= image_tag(@photo, :height => '100', :width => 'auto')
             .listname=victim.name
-          
+            
 
       / %td= link_to 'Edit', edit_victim_path(victim)
       / %td= link_to 'Destroy', victim, :method => :delete, :data => { :confirm => 'Are you sure?' }

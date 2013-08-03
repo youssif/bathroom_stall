@@ -54,11 +54,13 @@
           .all_reviews
             - @comments.each do |comment|
               - if comment.victim_id == @victim.id
-                .review
                 .each_review
-                  .name= comment.name 
-                  .reviewtext= comment.message 
-                  .goodbad= comment.good_bad 
+                  .name.twelve.columns
+                    = comment.good_bad 
+                    .goodbad.two.columns
+                      = comment.name 
+                    .reviewtext.offset-by-two.ten.columns
+                      = comment.message
                 %hr.review_line
 
         / .anonymous_or_not

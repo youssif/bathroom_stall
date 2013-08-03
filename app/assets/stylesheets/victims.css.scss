@@ -55,6 +55,7 @@ h2.scrawl{
   font-weight: bold;
   font-size: 10px;
   width:100px;
+  margin-bottom: 3em;
 /*  vertical-align: middle;
   float: left;*/
 /*  margin-left: 5px;
@@ -62,6 +63,7 @@ h2.scrawl{
 */}
 
 .image {
+  margin-top: 1em;
 /*  vertical-align: middle;
   float: left;*/
 }
@@ -99,7 +101,7 @@ div.review_container{
   -webkit-box-shadow: 0 0 14px gray;
   box-shadow: 0 0 30px gray;
   padding: 2.5em;
-  height: 19.5em;
+  height: 23.5em;
   width: 70%
 }
 
@@ -119,27 +121,32 @@ img.victim{
 }
 
 .name{
-  display: inline-block;
+/*  display: inline-block;
   margin-left: 2em;
   margin-right: 2em;
   width: 12em;
-  height: 9em;
+  height: 9em;*/
   font-weight: bold;
   color: #47626f;
 
 }
 
 .reviewtext{
-  display: inline-block;
-  width: 39%;
-  height: 9em;
+/*  display: inline-block;
+  width: 39%; */
+  padding-bottom: 2em;
+  width: 470px;
 }
 
 .goodbad{
-  display: inline-block;
-  height: 9em;
+/*  display: inline-block;
   margin-left: 2em;
-  margin-right: 2em;
+  margin-right: 2em;*/
+  height: 2.5em;
+}
+
+.container .ten.columns{
+  width: 470px;
 }
 
 .review_title{
