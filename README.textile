@@ -1,11 +1,11 @@
 h1. Bathroom Stall
+
 h3. 'The People Reviewer'
 
-ul.
-  li. An application that lets users review other people. 
-  li. It integrates with Facebook Authentication and Graph search, requiring users already have a Facebook profile to interact with the site as well as to be reviewed, to both limit duplication of reviewees as well as validate their actual existence. 
-  li. Anonymous commenting function originally existed, but has been commented out; still viewable within the code. 
-  li. Built using Ruby on Rails, HTML, CSS, OAuth, Facebook API, Graph Search API
+- An application that lets users review other people. 
+- It integrates with Facebook Authentication and Graph search, requiring users already have a Facebook profile to interact with the site as well as to be reviewed, to both limit duplication of reviewees as well as validate their actual existence. 
+- Anonymous commenting function originally existed, but has been commented out; still viewable within the code. 
+- Built using Ruby on Rails, HTML, CSS, OAuth, Facebook API, Graph Search API
 
 This application was generated with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.io/.
 
