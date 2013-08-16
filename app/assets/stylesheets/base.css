@@ -91,9 +91,7 @@
 	small { font-size: 80%; }
 
 /*	Blockquotes  */
-<<<<<<< HEAD
-	blockquote, blockquote p { font-size: 20px; line-height: 50px; color: #4CA2DE; font-style: italic; }
-=======
+
 	/*blockquote, blockquote p { font-size: 20px; line-height: 50px; color: #4CA2DE; font-style: italic; }
 >>>>>>> 9e9e01f88093faae0c721ea5c1b3a45fb00988c2
 	blockquote { margin: 0 0 20px 0; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
